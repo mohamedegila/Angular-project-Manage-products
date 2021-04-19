@@ -10,6 +10,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
 import { starComponent } from './shared/star/star.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { starComponent } from './shared/star/star.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
