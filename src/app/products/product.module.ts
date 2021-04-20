@@ -7,20 +7,20 @@ import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './product-list.component';
 import { starComponent } from '../shared/star/star.component';
 import { ProductRoutingModule } from './product-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
-    starComponent,
+   
     ConvertToSpacesPipe
 
   ],
   imports: [
-    CommonModule,
-    FormsModule,
     RouterModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    SharedModule
   ]
 })
 export class ProductModule { }
