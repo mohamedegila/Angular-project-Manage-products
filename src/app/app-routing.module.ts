@@ -1,3 +1,4 @@
+import { ProductDetailGuard } from './products/product-detail.guard';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { ProductListComponent } from './products/product-list.component';
 import { WelcomeComponent } from './home/welcome.component';
@@ -10,7 +11,9 @@ const routes: Routes = [
     path: 'products', component:ProductListComponent
   },
   {
-    path: 'products/:id', component: ProductDetailComponent
+    path: 'products/:id', 
+    canActivate:[ProductDetailGuard],
+    component: ProductDetailComponent
   },{ 
     path: 'welcome', component: WelcomeComponent 
   },{
